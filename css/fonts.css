@@ -1,27 +1,40 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: 'Geoform Bold';
+    src: url('../fonts/geoform/Geoform-Bold.otf') format(opentype);
+}
+
+@font-face {
+    font-family: 'Geoform ExtraBold';
+    src: url('../fonts/geoform/Geoform-ExtraBold.otf') format(opentype);
+}
+
+@font-face {
     font-family: 'Nexa';
     src: url('../fonts/nexa/Nexa-Heavy.ttf') format(truetype);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap'); /*Passion One*/
 
-:root {
-    --font-nexa: 'Nexa', Verdana, Arial, sans-serif;
-    --font-passion: 'Passion One', Verdana, sans-serif;
-    --font-default: Verdana, Arial, sans-serif;
-
-    --white: #F2F2F2;
-    --black: #000;
-
-    --second-02s: 0.26s;
-}
-
 * {
     margin: 0px;
     padding: 0px;
 }
+
+:root {
+    --geoform-bold: 'Geoform Bold', sans-serif;
+    --geoform-extrabold: 'Geoform ExtraBold', sans-serif;
+    --font-passion: 'Passion One', Verdana, sans-serif;
+    --nexa: 'Nexa', Arial, sans-serif;
+    --font-default: Verdana, Arial, sans-serif;
+
+    --black: #000;
+    --white: #fff;
+
+    --second-0-2s: 0.26s;
+}
+
 
 body {
     background-image: linear-gradient(to top, #262626, #404040);
@@ -31,7 +44,7 @@ body {
 header {
     background-color: var(--black);
     padding: 35px;
-    margin-bottom: 65px;
+    margin-bottom: 56px;
     color: var(--white);
     text-align: center;
 }
@@ -73,65 +86,79 @@ nav > a:hover {
     text-decoration: none;
 }
 
+main {
+    margin: auto;
+    background-color: #575757;
+    min-width: 650px;
+    text-align: center;
+}
+
+h1#title {
+    text-shadow: 4px 2px 3px var(--white);
+}
+
+h1#dafont {
+    color: brown;
+    text-shadow: 4px 3px 5px var(--black);
+}
+
+h1.h1s {
+    font-family: var(--geoform-extrabold);
+    font-size: 2.5em;
+}
+
+p.paragrapho {
+    font-family: var(--geoform-bold);
+    font-size: 1.85em;
+}
+
+a#geoform {
+    font-family: var(--geoform-bold);
+    font-size: 1.65em;
+}
+
+a#nexa {
+    font-family: var(--nexa);
+    font-size: 1.65em;
+}
+
+a#repo-git {
+    font-family: var(--geoform-bold);
+    font-size: 1.63em;
+}
+
+a.link-fonts {
+    transition-duration: var(--second-0-2s);
+}
+
+a.link-fonts:hover {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+a#paleta {
+    color: #fff;
+    transition-duration: var(--second-0-2s);
+}
+
+a#paleta:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+
 a {
     text-decoration: none;
     color: var(--white);
-}
-
-a#link-cursoemvideo {
-    color: #0000ff;
-    transition-duration: var(--second-02s);
-}
-
-a#github {
-    color: #797979;
-    transition-duration: var(--second-02s);
-}
-
-a#github:hover {
-    color: #4d4d4d;
-    text-decoration: none;
-}
-
-a#link-cursoemvideo:hover {
-    color: #0808ca;
-    text-decoration: none;
-}
-
-.txt-decorate {
-    text-decoration: underline;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-main {
-    margin: auto;
-    background-color: #1f1f1f;
-    min-width: 600px;
-    color: var(--white);
-    font-family: var(--font-nexa);
-    text-align: center;
-}
-
-h1#h1-sb {
-    text-align: center;
-    font-size: 3.2em;
-}
-
-section {
-    border: 1px solid var(--black);
-}
-
-section > p {
-    font-size: 1.68em;
-}
-
 footer {
     background-color: var(--black);
     padding: 6.5px;
-    margin-top: 49.4vh;
+    margin-top: 54.8vh;
 }
 
 footer > p {
